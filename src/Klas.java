@@ -29,8 +29,11 @@ public class Klas {
     }
 
     public String toString(){
-
-        return "in klas " + klascode + " zitten de volgende leerlingen: \n" + leerlingen.get(0).toString() + "\n" + leerlingen.get(1).toString() + "\n" + leerlingen.get(2).toString();
+        String leerlingen = "";
+        for(Object l : getLeerlingen()){
+            leerlingen += l.toString() + "\n";
+        }
+        return "in klas " + klascode + " zitten de volgende leerlingen: \n" + leerlingen;
 
     }
 
